@@ -1,15 +1,16 @@
 import numpy as np
 import time
+
+conv1_w=np.load('LeNet/LeNet-weights/Conv1_weight.np.npy')
+conv1_b=np.load('LeNet/LeNet-weights/Conv1_bias.np.npy')
+conv2_w=np.load('LeNet/LeNet-weights/Conv2_weight.np.npy')
+conv2_b=np.load('LeNet/LeNet-weights/Conv2_bias.np.npy')
+f1_w=np.load('LeNet/LeNet-weights/fc1_weight.np.npy')
+f2_w=np.load('LeNet/LeNet-weights/fc2_weight.np.npy')
+f1_b=np.load('LeNet/LeNet-weights/fc1_bias.np.npy')
+f2_b=np.load('LeNet/LeNet-weights/fc2_bias.np.npy')
 def predict(im):
     data = np.array(im)
-    conv1_w=np.load('LeNet/LeNet-weights/Conv1_weight.np.npy')
-    conv1_b=np.load('LeNet/LeNet-weights/Conv1_bias.np.npy')
-    conv2_w=np.load('LeNet/LeNet-weights/Conv2_weight.np.npy')
-    conv2_b=np.load('LeNet/LeNet-weights/Conv2_bias.np.npy')
-    f1_w=np.load('LeNet/LeNet-weights/fc1_weight.np.npy')
-    f2_w=np.load('LeNet/LeNet-weights/fc2_weight.np.npy')
-    f1_b=np.load('LeNet/LeNet-weights/fc1_bias.np.npy')
-    f2_b=np.load('LeNet/LeNet-weights/fc2_bias.np.npy')
     process_start = time.time()
     rs = np.zeros((10, 24, 24))
     for i in range(0, 10):
