@@ -57,21 +57,38 @@
 
     predictButton.on("click", function () {
       var img = canvas.toDataURL("image/jpeg");
-      console.log(img);
       predict(img);
     });
   }
-  function predict(img) {
-    $.ajax({
-      type: "POST",
-      url:  "http://127.0.0.1:5000/predict/cpu/lenet",
-      data: {
-        img
-      },
-      success: function(data){
-        $('#result').text(' Predicted Output: '+data);
+  function _update_table(data, type = "cpu", net = "lenet") {
+    const res = data.res;
+    const process_time = data.process_time;
+    const distrubutions = _soft_max(res);
+    console.log(distrubutions)
+    // console.log(res, process_time);
+    let index;
+    for (index = 0; index < distrubutions.length; index++) {
+      const element = _changeTwoDecimal(distrubutions[index]);
+      $("#"+net+type).children("td").eq(index+1).html(element);
+    }
+    $("#"+net+type).children("td").eq(index+1).html(_changeTwoDecimal(process_time));
+
+  }
+  function predict(img, type = "cpu", net = "lenet") {
+    if (net == "lenet") {
+      if (type == "cpu") {
+        $.ajax({
+          type: "POST",
+          url: "http://127.0.0.1:5000/predict/cpu/lenet",
+          data: {
+            img,
+          },
+          success: function (data) {
+            _update_table(data, type, net);
+          },
+        });
       }
-    });
+    }
   }
   function _clear_btn_init() {
     /* CLEAR BUTTON */
@@ -95,5 +112,32 @@
     $("#lineWidth").change(function () {
       context.lineWidth = $(this).val();
     });
+  }
+  function _soft_max(arr){
+    let _total = 0;
+    for (let index = 0; index < arr.length; index++) {
+      const element = arr[index];
+      arr[index] = element/100;
+    }
+    for (let index = 0; index < arr.length; index++) {
+      const element = arr[index];
+      _total += Math.exp(element);
+    }
+    for (let index = 0; index < arr.length; index++) {
+      const element = arr[index];
+      let temp = Math.exp(element) / _total;
+      arr[index] = temp;
+    }
+    return arr;
+  }
+  function _changeTwoDecimal(x) {
+    var f_x = parseFloat(x);
+    if (isNaN(f_x)) {
+      alert("function:changeTwoDecimal->parameter error");
+      return false;
+    }
+    f_x = Math.round(f_x * 100) / 100;
+
+    return f_x;
   }
 })();
