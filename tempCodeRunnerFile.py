@@ -1,0 +1,1 @@
+predict/cpu/lenet
