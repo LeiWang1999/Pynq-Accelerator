@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import base64
 from PIL import Image
 from io import BytesIO
-from LeNet import lenet_cpu
+from LeNet import lenet_cpu, lenet_fpga
 app = Flask(__name__)
 @app.route('/')
 def hello_world():
@@ -18,7 +18,11 @@ def get_predict_cpu_lenet():
     im = Image.open(BytesIO(base64.b64decode(base64_data))).resize((28,28)).convert('L')
     if net=="lenet" and process_type=="cpu":
         res, process_time = lenet_cpu.predict(im)
-    
+    elif net=="lenet" and process_type=="fpga":
+        res, process_time = lenet_fpga.predict(im)
+    else:
+        res = []
+        process_type = 0.0
     res_dict = {
         "res":tuple(res),
         "process_time": process_time

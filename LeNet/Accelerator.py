@@ -3,7 +3,7 @@ from pynq import Overlay
 import numpy as np
 import pynq.lib.dma
 
-overlay = Overlay('Bitstream.bit')   # load bitstream inside FPGA
+overlay = Overlay('LeNet/Bitstream.bit')   # load bitstream inside FPGA
 dma = overlay.CNNIOT.CNN_dma         # define module DMA
 
 xlnk = Xlnk()
