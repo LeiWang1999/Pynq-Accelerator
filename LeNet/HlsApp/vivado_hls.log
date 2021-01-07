@@ -1,0 +1,9 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source /home/lei/Software/Xilinx/Vivado/2020.1/scripts/vivado_hls/hls.tcl -notrace
+ERROR: [HLS 200-70] Command 'vivado_hls_bin' does not exist; use 'help' to list all commands.
+INFO: [Common 17-206] Exiting vivado_hls at Sun Jan  3 18:47:40 2021...

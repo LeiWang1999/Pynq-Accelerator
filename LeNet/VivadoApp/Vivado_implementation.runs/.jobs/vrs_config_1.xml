@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="CNN_imp_processing_system7_0_0_synth_1" LaunchDir="/home/lei/CNNIOT1/deeplib/Vivado_implementation/Vivado_implementation.runs/CNN_imp_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="CNN_imp_cnn_0_0_synth_1" LaunchDir="/home/lei/CNNIOT1/deeplib/Vivado_implementation/Vivado_implementation.runs/CNN_imp_cnn_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="CNN_imp_axi_dma_0_0_synth_1" LaunchDir="/home/lei/CNNIOT1/deeplib/Vivado_implementation/Vivado_implementation.runs/CNN_imp_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="CNN_imp_axi_smc_0_synth_1" LaunchDir="/home/lei/CNNIOT1/deeplib/Vivado_implementation/Vivado_implementation.runs/CNN_imp_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="CNN_imp_rst_ps7_0_100M_0_synth_1" LaunchDir="/home/lei/CNNIOT1/deeplib/Vivado_implementation/Vivado_implementation.runs/CNN_imp_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

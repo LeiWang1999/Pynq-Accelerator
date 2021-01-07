@@ -1,0 +1,63 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'cnn'" level="0">
+<item name = "Date">Tue Jan  5 16:17:19 2021
+</item>
+<item name = "Version">2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)</item>
+<item name = "Project">deeplib</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 8.858 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_38_1">?, ?, ?, -, -, inf, no</column>
+<column name=" + VITIS_LOOP_46_2">171, 171, 12, 10, 1, 17, yes</column>
+<column name=" + VITIS_LOOP_79_3">33, ?, 34, 10, 1, 1 ~ ?, yes</column>
+<column name=" + VITIS_LOOP_90_4">33, ?, 34, 10, 1, 1 ~ ?, yes</column>
+<column name=" + VITIS_LOOP_99_5">33, ?, 34, 10, 1, 1 ~ ?, yes</column>
+<column name=" + VITIS_LOOP_121_6_VITIS_LOOP_123_7_VITIS_LOOP_125_8">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_130_9">?, ?, ?, -, -, ?, no</column>
+<column name="   +++ VITIS_LOOP_133_10">?, ?, ?, -, -, ?, no</column>
+<column name="    ++++ VITIS_LOOP_136_11">?, ?, 11, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_188_12">17, ?, 18, 10, 1, 1 ~ ?, yes</column>
+<column name=" + VITIS_LOOP_205_13_VITIS_LOOP_207_14_VITIS_LOOP_209_15">?, ?, ?, -, -, ?, no</column>
+<column name="  ++ VITIS_LOOP_213_16">?, ?, ?, -, -, ?, no</column>
+<column name="   +++ VITIS_LOOP_215_17">?, ?, 4 ~ 12, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_272_18">33, ?, 34, 10, 1, 1 ~ ?, yes</column>
+<column name=" + VITIS_LOOP_282_19">33, ?, 34, 10, 1, 1 ~ ?, yes</column>
+<column name=" + VITIS_LOOP_290_20">55, ?, 55 ~ ?, -, -, 1 ~ ?, no</column>
+<column name="  ++ VITIS_LOOP_293_21">45, ?, 42, 10, 1, 1 ~ ?, yes</column>
+<column name=" + VITIS_LOOP_310_22">15, 327675, 16, 10, 1, 1 ~ 32767, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

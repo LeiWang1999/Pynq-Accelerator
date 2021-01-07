@@ -1,0 +1,152 @@
+
+
+================================================================
+== Vitis HLS Report for 'generic_cast_IEEE754_int_6_float_s'
+================================================================
+* Date:           Tue Jan  5 16:17:18 2021
+
+* Version:        2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)
+* Project:        deeplib
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 4.420 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline |
+    |   min   |   max   |    min    |    max    | min | max |   Type   |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+    |        2|        2| 20.000 ns | 20.000 ns |    1|    1| function |
+    +---------+---------+-----------+-----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.88>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%x_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %x" [/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:306]   --->   Operation 4 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast i32 %x_read" [/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:311]   --->   Operation 5 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_Result_s = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %p_Val2_s, i32"   --->   Operation 6 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_Repl2_1 = partselect i8 @_ssdm_op_PartSelect.i8.i32.i32.i32, i32 %p_Val2_s, i32, i32"   --->   Operation 7 'partselect' 'p_Repl2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_Repl2_s = trunc i32 %p_Val2_s"   --->   Operation 8 'trunc' 'p_Repl2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln340 = zext i8 %p_Repl2_1" [/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:340]   --->   Operation 9 'zext' 'zext_ln340' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.91ns)   --->   "%add_ln340 = add i9, i9 %zext_ln340" [/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:340]   --->   Operation 10 'add' 'add_ln340' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%isNeg = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %add_ln340, i32"   --->   Operation 11 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.91ns)   --->   "%sub_ln1311 = sub i8, i8 %p_Repl2_1"   --->   Operation 12 'sub' 'sub_ln1311' <Predicate = true> <Delay = 1.91> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln1311 = sext i8 %sub_ln1311"   --->   Operation 13 'sext' 'sext_ln1311' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.96ns)   --->   "%ush = select i1 %isNeg, i9 %sext_ln1311, i9 %add_ln340"   --->   Operation 14 'select' 'ush' <Predicate = true> <Delay = 0.96> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 4.42>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%mantissa_V = bitconcatenate i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1, i1, i23 %p_Repl2_s, i1"   --->   Operation 15 'bitconcatenate' 'mantissa_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln15 = zext i25 %mantissa_V" [/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15]   --->   Operation 16 'zext' 'zext_ln15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%sh_prom_i_i_cast_cast_cast = sext i9 %ush"   --->   Operation 17 'sext' 'sh_prom_i_i_cast_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%sh_prom_i_i_cast_cast_cast_cast = zext i32 %sh_prom_i_i_cast_cast_cast"   --->   Operation 18 'zext' 'sh_prom_i_i_cast_cast_cast_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%r_V = lshr i79 %zext_ln15, i79 %sh_prom_i_i_cast_cast_cast_cast"   --->   Operation 19 'lshr' 'r_V' <Predicate = (isNeg)> <Delay = 0.00> <CoreInst = "Shift">   --->   Core 13 'Shift' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%r_V_1 = shl i79 %zext_ln15, i79 %sh_prom_i_i_cast_cast_cast_cast"   --->   Operation 20 'shl' 'r_V_1' <Predicate = (!isNeg)> <Delay = 0.00> <CoreInst = "Shift">   --->   Core 13 'Shift' <Latency = 0> <II = 1> <Delay = 4.42> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i79.i32, i79 %r_V, i32"   --->   Operation 21 'bitselect' 'tmp' <Predicate = (isNeg)> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%zext_ln662 = zext i1 %tmp"   --->   Operation 22 'zext' 'zext_ln662' <Predicate = (isNeg)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns) (grouped into LUT with out node val_V)   --->   "%tmp_1 = partselect i32 @_ssdm_op_PartSelect.i32.i79.i32.i32, i79 %r_V_1, i32, i32"   --->   Operation 23 'partselect' 'tmp_1' <Predicate = (!isNeg)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (4.42ns) (out node of the LUT)   --->   "%val_V = select i1 %isNeg, i32 %zext_ln662, i32 %tmp_1"   --->   Operation 24 'select' 'val_V' <Predicate = true> <Delay = 4.42> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 25 [1/1] (2.55ns)   --->   "%result_V_1 = sub i32, i32 %val_V"   --->   Operation 25 'sub' 'result_V_1' <Predicate = (p_Result_s)> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [1/1] (0.69ns)   --->   "%p_Val2_3 = select i1 %p_Result_s, i32 %result_V_1, i32 %val_V" [/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59]   --->   Operation 26 'select' 'p_Val2_3' <Predicate = true> <Delay = 0.69> <CoreInst = "Sel">   --->   Core 11 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%ret_ln62 = ret i32 %p_Val2_3" [/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:62]   --->   Operation 27 'ret' 'ret_ln62' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 2.88ns
+The critical path consists of the following:
+	wire read on port 'x' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:306) [2]  (0 ns)
+	'add' operation ('sh', /wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:340) [10]  (1.92 ns)
+	'select' operation ('ush') [14]  (0.968 ns)
+
+ <State 2>: 4.42ns
+The critical path consists of the following:
+	'shl' operation ('r.V') [18]  (0 ns)
+	'select' operation ('val.V') [22]  (4.42 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'sub' operation ('result.V') [23]  (2.55 ns)
+	'select' operation ('__Val2__', /wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59) [24]  (0.698 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

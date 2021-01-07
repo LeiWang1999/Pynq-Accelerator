@@ -1,0 +1,1186 @@
+INFO-FLOW: Workspace /home/lei/CNNIOT1/deeplib/deeplib/solution1 opened at Tue Jan 05 16:16:59 CST 2021
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/home/lei/Software/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/home/lei/Software/Xilinx/Vivado/2020.1/data:/home/lei/Software/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
+DBG:HLSDevice: Trying to load device library: /home/lei/Software/Xilinx/Vitis/2020.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/lei/Software/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 1.79 sec.
+Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute       ap_family_info -name zynq -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.91 sec.
+Execute     ap_part_info -data single -name xc7z020clg400-1 
+Execute     ap_part_info -name xc7z020clg400-1 -data resources 
+Execute     config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -default_slave_interface 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 2.09 sec.
+Execute   set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/home/lei/Software/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/home/lei/Software/Xilinx/Vivado/2020.1/data:/home/lei/Software/Xilinx/Vitis/2020.1/data
+Execute     ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     ap_family_info -name zynq -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -dump_cfg 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file 'deeplib/main.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling deeplib/main.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.main.cpp.diag.yml -fno-limit-debug-info -gcc-toolchain /home/lei/Software/Xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E deeplib/main.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -I /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/autopilot -I /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.main.cpp.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.main.cpp.err.log 
+Command       ap_eval done; 0.23 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute       set_directive_top cnn -name=cnn 
+INFO-FLOW: Setting directive 'TOP' name=cnn 
+INFO-FLOW: Setting directive 'TOP' name=cnn 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=cnn 
+Execute       list_core -type functional_unit 
+Execute       clang_tidy xilinx-systemc-detector /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/.systemc_flag -fix-errors /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.54 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/all.directive.json -fix-errors /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.55 sec.
+Execute       clang_tidy xilinx-constantarray-param,xilinx-remove-assert /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.46 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 1 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute       clang_tidy -errorcheck xilinx-label-all-loops /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.err.log 
+Command         ap_eval done; 0.69 sec.
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command       clang_tidy done; 0.75 sec.
+Execute       clang_tidy -errorcheck xilinx-top-parameters /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.err.log 
+Command         ap_eval done; 0.37 sec.
+Command       clang_tidy done; 0.37 sec.
+Execute       clang_tidy -errorcheck xilinx-array-stream-check /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.err.log 
+Command         ap_eval done; 0.38 sec.
+WARNING: [HLS 214-140] Array stream parameter 'in_data' in function 'cnn' may require the 'volatile' qualifier to prevent the compiler from altering array accesses and/or modifying the desired streaming order: /home/lei/CNNIOT1/deeplib/deeplib/main.cpp:32
+WARNING: [HLS 214-140] Array stream parameter 'out_data' in function 'cnn' may require the 'volatile' qualifier to prevent the compiler from altering array accesses and/or modifying the desired streaming order: /home/lei/CNNIOT1/deeplib/deeplib/main.cpp:32
+Command       clang_tidy done; 0.39 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/xilinx-dataflow-lawyer.main.pp.0.cpp.diag.yml /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/xilinx-dataflow-lawyer.main.pp.0.cpp.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/xilinx-dataflow-lawyer.main.pp.0.cpp.err.log 
+Command       ap_eval done; 0.46 sec.
+Execute       clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang-tidy.main.pp.0.cpp.err.log 
+Command         ap_eval done; 0.46 sec.
+Command       clang_tidy done; 0.46 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.main.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.pragma.2.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/autopilot -I /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.bc > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.main.pragma.2.cpp.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.main.pragma.2.cpp.err.log 
+Command       ap_eval done; 0.47 sec.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.g.bc"  
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/main.g.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.0.bc > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+Command         ap_eval done; 0.19 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.19 sec.
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/lib/libhlsm_39.bc /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/lib/libhlsm_39.bc /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/lib/libhlsmc++_39.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command         ap_eval done; 2.64 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 2.64 sec.
+Execute       run_link_or_opt -opt -out /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=cnn -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=cnn -reflow-float-conversion -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command         ap_eval done; 0.87 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.87 sec.
+Execute       run_link_or_opt -out /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/lib/libfloatconversion_39.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=cnn 
+Execute         ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=cnn -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_interface 
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr /home/lei/Software/Xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -fhls -mllvm -hls-top-function-name=cnn -mllvm -hls-db-dir -mllvm /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db -emit-llvm -c -mllvm -hls-bitcode-version=3.1 -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/top-io-fe.xml -mllvm -pass-remarks=supported-subset -mllvm -reflow-enable-interface-default-setting=false -mllvm -reflow-enable-slave-interface-default-setting=false -mllvm -gen-kernel-xml=false -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -x ir /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.lto.bc > /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command       ap_eval done; 0.58 sec.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'cnn(ap_axiu<32, 1, 1, 1>*, ap_axiu<32, 1, 1, 1>*)' (deeplib/main.cpp:33:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'in_data' (deeplib/main.cpp:33:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'out_data' (deeplib/main.cpp:33:0)
+INFO-FLOW: DBG:CMD: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.234 ; gain = 1163.777 ; free physical = 712 ; free virtual = 8158
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.234 ; gain = 1163.777 ; free physical = 712 ; free virtual = 8158
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top cnn -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.0.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.3 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.234 ; gain = 1163.777 ; free physical = 667 ; free virtual = 8132
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.1.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.27 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform done; 0.16 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1575.234 ; gain = 1163.777 ; free physical = 622 ; free virtual = 8098
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.g.1.bc to /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.o.1.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_79_3' (deeplib/main.cpp:79) in function 'cnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_90_4' (deeplib/main.cpp:90) in function 'cnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_99_5' (deeplib/main.cpp:99) in function 'cnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_188_12' (deeplib/main.cpp:188) in function 'cnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_272_18' (deeplib/main.cpp:272) in function 'cnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_282_19' (deeplib/main.cpp:282) in function 'cnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_293_21' (deeplib/main.cpp:41) in function 'cnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_310_22' (deeplib/main.cpp:310) in function 'cnn' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_46_2' (deeplib/main.cpp:41) in function 'cnn' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_125_8' (deeplib/main.cpp:125) in function 'cnn' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_209_15' (deeplib/main.cpp:209) in function 'cnn' for pipelining.
+WARNING: [HLS 200-936] Cannot unroll loop 'VITIS_LOOP_130_9' (deeplib/main.cpp:130) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+WARNING: [HLS 200-936] Cannot unroll loop 'VITIS_LOOP_133_10' (deeplib/main.cpp:133) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+WARNING: [HLS 200-936] Cannot unroll loop 'VITIS_LOOP_136_11' (deeplib/main.cpp:136) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+WARNING: [HLS 200-936] Cannot unroll loop 'VITIS_LOOP_213_16' (deeplib/main.cpp:213) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+WARNING: [HLS 200-936] Cannot unroll loop 'VITIS_LOOP_215_17' (deeplib/main.cpp:215) in function 'cnn': cannot completely unroll a loop with a variable trip count.
+Command         transform done; 0.81 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'cnn' (deeplib/main.cpp:32)...6 expression(s) balanced.
+Command         transform done; 0.35 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1575.234 ; gain = 1163.777 ; free physical = 560 ; free virtual = 8043
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.o.2.bc -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117:10) in function 'cnn' and propagating its result(s) since all actual argument(s) to the function are constants.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_125_8' (deeplib/main.cpp:125:40) in function 'cnn' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_123_7' (deeplib/main.cpp:123:36) in function 'cnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_121_6' (deeplib/main.cpp:121:33) in function 'cnn'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_209_15' (deeplib/main.cpp:209:41) in function 'cnn' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_207_14' (deeplib/main.cpp:207:37) in function 'cnn'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_205_13' (deeplib/main.cpp:205:34) in function 'cnn'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_290_20' (deeplib/main.cpp:290:35) in function 'cnn' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+WARNING: [XFORM 203-561] 'VITIS_LOOP_38_1' (deeplib/main.cpp:40:8) in function 'cnn' is an infinite loop.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_38_1' (deeplib/main.cpp:40:8) in function 'cnn' more than one sub loop.
+WARNING: [XFORM 203-631] Renaming function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' to 'generic_cast_IEEE754<int, 6, float>' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15:1)
+WARNING: [XFORM 203-561] Updating loop upper bound from -1 to 32767 for loop 'VITIS_LOOP_310_22' in function 'cnn'.
+INFO: [HLS 200-472] Inferring partial write operation for 'Parameters' (deeplib/main.cpp:49:18)
+INFO: [HLS 200-472] Inferring partial write operation for 'Input' (deeplib/main.cpp:82:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'Bias' (deeplib/main.cpp:94:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'Weight' (deeplib/main.cpp:103:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'Input' (deeplib/main.cpp:191:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'Input' (deeplib/main.cpp:275:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'Bias' (deeplib/main.cpp:286:15)
+INFO: [HLS 200-472] Inferring partial write operation for 'Weight' (deeplib/main.cpp:308:16)
+Command         transform done; 0.59 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1575.234 ; gain = 1163.777 ; free physical = 527 ; free virtual = 8013
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.5 sec.
+Command     elaborate done; 16.64 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'cnn' ...
+Execute       ap_set_top_model cnn 
+WARNING: [SYN 201-103] Legalizing function name 'generic_cast_IEEE754<int, 6, float>' to 'generic_cast_IEEE754_int_6_float_s'.
+Execute       get_model_list cnn -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model cnn 
+Execute       preproc_iomode -model generic_cast_IEEE754<int, 6, float> 
+Execute       preproc_iomode -model Axi_Transfer 
+Execute       get_model_list cnn -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Axi_Transfer {generic_cast_IEEE754<int, 6, float>} cnn
+INFO-FLOW: Configuring Module : Axi_Transfer ...
+Execute       set_default_model Axi_Transfer 
+Execute       apply_spec_resource_limit Axi_Transfer 
+INFO-FLOW: Configuring Module : generic_cast_IEEE754<int, 6, float> ...
+Execute       set_default_model generic_cast_IEEE754<int, 6, float> 
+Execute       apply_spec_resource_limit generic_cast_IEEE754<int, 6, float> 
+INFO-FLOW: Configuring Module : cnn ...
+Execute       set_default_model cnn 
+Execute       apply_spec_resource_limit cnn 
+INFO-FLOW: Model list for preprocess: Axi_Transfer {generic_cast_IEEE754<int, 6, float>} cnn
+INFO-FLOW: Preprocessing Module: Axi_Transfer ...
+Execute       set_default_model Axi_Transfer 
+Execute       cdfg_preprocess -model Axi_Transfer 
+Execute       rtl_gen_preprocess Axi_Transfer 
+INFO-FLOW: Preprocessing Module: generic_cast_IEEE754<int, 6, float> ...
+Execute       set_default_model generic_cast_IEEE754<int, 6, float> 
+Execute       cdfg_preprocess -model generic_cast_IEEE754<int, 6, float> 
+Execute       rtl_gen_preprocess generic_cast_IEEE754<int, 6, float> 
+INFO-FLOW: Preprocessing Module: cnn ...
+Execute       set_default_model cnn 
+Execute       cdfg_preprocess -model cnn 
+Execute       rtl_gen_preprocess cnn 
+INFO-FLOW: Model list for synthesis: Axi_Transfer {generic_cast_IEEE754<int, 6, float>} cnn
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Axi_Transfer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Axi_Transfer 
+Execute       schedule -model Axi_Transfer 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'Axi_Transfer'.
+WARNING: [HLS 200-880] The II Violation in module 'Axi_Transfer' (Function: Axi_Transfer): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between axis read on port 'in_data' and axis read on port 'in_data'.
+WARNING: [HLS 200-880] The II Violation in module 'Axi_Transfer' (Function: Axi_Transfer): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between axis read on port 'in_data' and axis read on port 'in_data'.
+WARNING: [HLS 200-880] The II Violation in module 'Axi_Transfer' (Function: Axi_Transfer): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between axis read on port 'in_data' and axis read on port 'in_data'.
+WARNING: [HLS 200-880] The II Violation in module 'Axi_Transfer' (Function: Axi_Transfer): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between axis read on port 'in_data' and axis read on port 'in_data'.
+WARNING: [HLS 200-880] The II Violation in module 'Axi_Transfer' (Function: Axi_Transfer): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between axis read on port 'in_data' and axis read on port 'in_data'.
+WARNING: [HLS 200-880] The II Violation in module 'Axi_Transfer' (Function: Axi_Transfer): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1) between axis read on port 'in_data' and axis read on port 'in_data'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 11.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.14 seconds; current allocated memory: 287.424 MB.
+Execute       syn_report -verbosereport -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.sched.adb -f 
+INFO-FLOW: Finish scheduling Axi_Transfer.
+Execute       set_default_model Axi_Transfer 
+Execute       bind -model Axi_Transfer 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 287.688 MB.
+Execute       syn_report -verbosereport -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.bind.adb -f 
+INFO-FLOW: Finish binding Axi_Transfer.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generic_cast_IEEE754_int_6_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model generic_cast_IEEE754<int, 6, float> 
+Execute       schedule -model generic_cast_IEEE754<int, 6, float> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'generic_cast_IEEE754<int, 6, float>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 287.799 MB.
+Execute       syn_report -verbosereport -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.sched.adb -f 
+INFO-FLOW: Finish scheduling generic_cast_IEEE754<int, 6, float>.
+Execute       set_default_model generic_cast_IEEE754<int, 6, float> 
+Execute       bind -model generic_cast_IEEE754<int, 6, float> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 287.968 MB.
+Execute       syn_report -verbosereport -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.bind.adb -f 
+INFO-FLOW: Finish binding generic_cast_IEEE754<int, 6, float>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model cnn 
+Execute       schedule -model cnn 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul223) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=p_mid131) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=p_mid129) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln205_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul117) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=tmp6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul95) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_38) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=p_mid1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln121_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln132) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=empty_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=tmp3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln135) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_46_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 12.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_272_18'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 34.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_282_19'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 34.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_293_21'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 42.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_310_22'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 16.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_188_12'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 18.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_79_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 34.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_90_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 34.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_99_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 10, Depth = 34.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+WARNING: [HLS 200-871] Estimated clock period (8.858ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+WARNING: [HLS 200-1016] The critical path in module 'cnn' consists of the following:	'icmp' operation ('icmp_ln88', deeplib/main.cpp:88) [450]  (2.47 ns)
+	'and' operation ('and_ln88', deeplib/main.cpp:88) [452]  (0.978 ns)
+	blocking operation 5.41 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.82 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.84 seconds; current allocated memory: 290.599 MB.
+Execute       syn_report -verbosereport -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.78 sec.
+Execute       db_write -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.sched.adb -f 
+INFO-FLOW: Finish scheduling cnn.
+Execute       set_default_model cnn 
+Execute       bind -model cnn 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.47 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.28 seconds; current allocated memory: 296.163 MB.
+Execute       syn_report -verbosereport -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.59 sec.
+Execute       db_write -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.bind.adb -f 
+INFO-FLOW: Finish binding cnn.
+Execute       get_model_list cnn -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess Axi_Transfer 
+Execute       rtl_gen_preprocess generic_cast_IEEE754<int, 6, float> 
+Execute       rtl_gen_preprocess cnn 
+INFO-FLOW: Model list for RTL generation: Axi_Transfer {generic_cast_IEEE754<int, 6, float>} cnn
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Axi_Transfer' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model Axi_Transfer -top_prefix cnn_ -sub_prefix cnn_ -mg_file /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Axi_Transfer'.
+INFO: [HLS 200-111]  Elapsed time: 0.65 seconds; current allocated memory: 296.974 MB.
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Axi_Transfer -style xilinx -f -lang vhdl -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/vhdl/cnn_Axi_Transfer 
+Execute       gen_rtl Axi_Transfer -style xilinx -f -lang vlog -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/verilog/cnn_Axi_Transfer 
+Execute       syn_report -csynth -model Axi_Transfer -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/report/Axi_Transfer_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model Axi_Transfer -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/report/Axi_Transfer_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model Axi_Transfer -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model Axi_Transfer -f -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.adb 
+Execute       gen_tb_info Axi_Transfer -p /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generic_cast_IEEE754_int_6_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model generic_cast_IEEE754<int, 6, float> -top_prefix cnn_ -sub_prefix cnn_ -mg_file /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_cast_IEEE754_int_6_float_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 298.129 MB.
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute       gen_rtl generic_cast_IEEE754<int, 6, float> -style xilinx -f -lang vhdl -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/vhdl/cnn_generic_cast_IEEE754_int_6_float_s 
+Execute       gen_rtl generic_cast_IEEE754<int, 6, float> -style xilinx -f -lang vlog -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/verilog/cnn_generic_cast_IEEE754_int_6_float_s 
+Execute       syn_report -csynth -model generic_cast_IEEE754<int, 6, float> -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/report/generic_cast_IEEE754_int_6_float_s_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model generic_cast_IEEE754<int, 6, float> -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/report/generic_cast_IEEE754_int_6_float_s_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model generic_cast_IEEE754<int, 6, float> -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model generic_cast_IEEE754<int, 6, float> -f -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.adb 
+Execute       gen_tb_info generic_cast_IEEE754<int, 6, float> -p /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model cnn -top_prefix  -sub_prefix cnn_ -mg_file /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/in_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn/out_data' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'cnn' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_15ns_15ns_15s_15s_15_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_15s_15s_15s_15_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_32ns_64_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64ns_31ns_95_5_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_15s_15s_15_4_1': 17 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32ns_32ns_32_36_seq_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn'.
+Command       create_rtl_model done; 0.51 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.56 seconds; current allocated memory: 314.920 MB.
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute       gen_rtl cnn -istop -style xilinx -f -lang vhdl -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/vhdl/cnn 
+Command       gen_rtl done; 0.22 sec.
+Execute       gen_rtl cnn -istop -style xilinx -f -lang vlog -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/verilog/cnn 
+Command       gen_rtl done; 0.12 sec.
+Execute       syn_report -csynth -model cnn -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/report/cnn_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.11 sec.
+Execute       syn_report -rtlxml -model cnn -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/syn/report/cnn_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model cnn -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.7 sec.
+Execute       db_write -model cnn -f -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.adb 
+Command       db_write done; 0.22 sec.
+Execute       gen_tb_info cnn -p /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn 
+Execute       export_constraint_db -f -tool general -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.constraint.tcl 
+Execute       syn_report -designview -model cnn -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.design.xml 
+Command       syn_report done; 0.23 sec.
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model cnn -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model cnn -o /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks cnn 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain cnn 
+INFO-FLOW: Model list for RTL component generation: Axi_Transfer {generic_cast_IEEE754<int, 6, float>} cnn
+INFO-FLOW: Handling components in module [Axi_Transfer] ... 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+INFO-FLOW: Handling components in module [generic_cast_IEEE754_int_6_float_s] ... 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+INFO-FLOW: Handling components in module [cnn] ... 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+INFO-FLOW: Found component cnn_fadd_32ns_32ns_32_5_full_dsp_1.
+INFO-FLOW: Append model cnn_fadd_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: Found component cnn_fmul_32ns_32ns_32_4_max_dsp_1.
+INFO-FLOW: Append model cnn_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: Found component cnn_fdiv_32ns_32ns_32_16_no_dsp_1.
+INFO-FLOW: Append model cnn_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO-FLOW: Found component cnn_sitofp_32ns_32_6_no_dsp_1.
+INFO-FLOW: Append model cnn_sitofp_32ns_32_6_no_dsp_1
+INFO-FLOW: Found component cnn_fcmp_32ns_32ns_1_2_no_dsp_1.
+INFO-FLOW: Append model cnn_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: Found component cnn_sdiv_32ns_32ns_32_36_seq_1.
+INFO-FLOW: Append model cnn_sdiv_32ns_32ns_32_36_seq_1
+INFO-FLOW: Found component cnn_mul_32s_32s_32_2_1.
+INFO-FLOW: Append model cnn_mul_32s_32s_32_2_1
+INFO-FLOW: Found component cnn_mul_32ns_32ns_64_2_1.
+INFO-FLOW: Append model cnn_mul_32ns_32ns_64_2_1
+INFO-FLOW: Found component cnn_mul_64ns_31ns_95_5_1.
+INFO-FLOW: Append model cnn_mul_64ns_31ns_95_5_1
+INFO-FLOW: Found component cnn_mul_mul_15s_15s_15_4_1.
+INFO-FLOW: Append model cnn_mul_mul_15s_15s_15_4_1
+INFO-FLOW: Found component cnn_ama_addmuladd_15ns_15ns_15s_15s_15_4_1.
+INFO-FLOW: Append model cnn_ama_addmuladd_15ns_15ns_15s_15s_15_4_1
+INFO-FLOW: Found component cnn_mac_muladd_15s_15s_15s_15_4_1.
+INFO-FLOW: Append model cnn_mac_muladd_15s_15s_15s_15_4_1
+INFO-FLOW: Found component cnn_Input.
+INFO-FLOW: Append model cnn_Input
+INFO-FLOW: Found component cnn_Bias.
+INFO-FLOW: Append model cnn_Bias
+INFO-FLOW: Found component cnn_Parameters.
+INFO-FLOW: Append model cnn_Parameters
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model Axi_Transfer
+INFO-FLOW: Append model generic_cast_IEEE754_int_6_float_s
+INFO-FLOW: Append model cnn
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: cnn_fadd_32ns_32ns_32_5_full_dsp_1 cnn_fmul_32ns_32ns_32_4_max_dsp_1 cnn_fdiv_32ns_32ns_32_16_no_dsp_1 cnn_sitofp_32ns_32_6_no_dsp_1 cnn_fcmp_32ns_32ns_1_2_no_dsp_1 cnn_sdiv_32ns_32ns_32_36_seq_1 cnn_mul_32s_32s_32_2_1 cnn_mul_32ns_32ns_64_2_1 cnn_mul_64ns_31ns_95_5_1 cnn_mul_mul_15s_15s_15_4_1 cnn_ama_addmuladd_15ns_15ns_15s_15s_15_4_1 cnn_mac_muladd_15s_15s_15s_15_4_1 cnn_Input cnn_Bias cnn_Parameters regslice_core Axi_Transfer generic_cast_IEEE754_int_6_float_s cnn
+INFO-FLOW: To file: write model cnn_fadd_32ns_32ns_32_5_full_dsp_1
+INFO-FLOW: To file: write model cnn_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: To file: write model cnn_fdiv_32ns_32ns_32_16_no_dsp_1
+INFO-FLOW: To file: write model cnn_sitofp_32ns_32_6_no_dsp_1
+INFO-FLOW: To file: write model cnn_fcmp_32ns_32ns_1_2_no_dsp_1
+INFO-FLOW: To file: write model cnn_sdiv_32ns_32ns_32_36_seq_1
+INFO-FLOW: To file: write model cnn_mul_32s_32s_32_2_1
+INFO-FLOW: To file: write model cnn_mul_32ns_32ns_64_2_1
+INFO-FLOW: To file: write model cnn_mul_64ns_31ns_95_5_1
+INFO-FLOW: To file: write model cnn_mul_mul_15s_15s_15_4_1
+INFO-FLOW: To file: write model cnn_ama_addmuladd_15ns_15ns_15s_15s_15_4_1
+INFO-FLOW: To file: write model cnn_mac_muladd_15s_15s_15s_15_4_1
+INFO-FLOW: To file: write model cnn_Input
+INFO-FLOW: To file: write model cnn_Bias
+INFO-FLOW: To file: write model cnn_Parameters
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model Axi_Transfer
+INFO-FLOW: To file: write model generic_cast_IEEE754_int_6_float_s
+INFO-FLOW: To file: write model cnn
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): cnn
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/lei/CNNIOT1/deeplib/deeplib/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'cnn_sdiv_32ns_32ns_32_36_seq_1_div'
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'cnn_mul_32s_32s_32_2_1_Multiplier_0'
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'cnn_mul_32ns_32ns_64_2_1_Multiplier_1'
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'cnn_mul_64ns_31ns_95_5_1_Multiplier_2'
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+INFO: [RTMG 210-278] Implementing memory 'cnn_Input_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'cnn_Bias_ram (RAM)' using block RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'cnn_Parameters_ram (RAM)' using distributed RAMs.
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.5 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/lei/CNNIOT1/deeplib/deeplib/solution1
+Execute       get_solution -flow_target 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=cnn xml_exists=0
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command       ap_source done; 0.14 sec.
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.constraint.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=4
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=2
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=19 #gSsdmPorts=4
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.tbgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.tbgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.constraint.tcl 
+Execute       sc_get_clocks cnn 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/impl/misc/cnn_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/impl/misc/cnn_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/impl/misc/cnn_ap_fdiv_14_no_dsp_32_ip.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/impl/misc/cnn_ap_fmul_2_max_dsp_32_ip.tcl 
+Execute       source /home/lei/CNNIOT1/deeplib/deeplib/solution1/impl/misc/cnn_ap_sitofp_4_no_dsp_32_ip.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1575.234 ; gain = 1163.777 ; free physical = 476 ; free virtual = 7961
+INFO: [VHDL 208-304] Generating VHDL RTL for cnn.
+INFO: [VLOG 209-307] Generating Verilog RTL for cnn.
+Execute       syn_report -model cnn -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 112.89 MHz
+Command     autosyn done; 6.66 sec.
+Command   csynth_design done; 23.3 sec.
+Command ap_source done; 25.46 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/lei/CNNIOT1/deeplib/deeplib/solution1 opened at Tue Jan 05 17:11:33 CST 2021
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/home/lei/Software/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/home/lei/Software/Xilinx/Vivado/2020.1/data:/home/lei/Software/Xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xc7z020clg400-1 -data single -quiet 
+DBG:HLSDevice: Trying to load device library: /home/lei/Software/Xilinx/Vitis/2020.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/lei/Software/Xilinx/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 1.29 sec.
+Execute       ap_part_info -name xc7z020clg400-1 -data info 
+Execute       ap_family_info -name zynq -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute         get_default_platform 
+Execute         ap_part_info -data single -name xc7z020-clg400-1 
+Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute         config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         config_chip_info -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 1.36 sec.
+Execute     ap_part_info -data single -name xc7z020clg400-1 
+Execute     ap_part_info -name xc7z020clg400-1 -data resources 
+Execute     config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     config_chip_info -speed slow 
+Execute     send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_interface -default_slave_interface 
+Execute     get_config_rtl -register_reset_num 
+Command   open_solution done; 1.48 sec.
+Execute   set_part xc7z020clg400-1 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/home/lei/Software/Xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/home/lei/Software/Xilinx/Vivado/2020.1/data:/home/lei/Software/Xilinx/Vitis/2020.1/data
+Execute     ap_part_info -name xc7z020clg400-1 -data single -quiet 
+Execute     ap_part_info -name xc7z020clg400-1 -data info 
+Execute     ap_family_info -name zynq -data info 
+Execute     add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
+Execute       get_default_platform 
+Execute       ap_part_info -data single -name xc7z020-clg400-1 
+Execute       ap_part_info -name xc7z020-clg400-1 -data resources 
+Execute       config_chip_info -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_chip_info -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     get_config_export -clock_margin 
+Execute     get_config_export -custom_script 
+Execute     get_config_export -description 
+Execute     get_config_export -display_name 
+Execute     get_config_export -driver_input_dir 
+Execute     get_config_export -ipname 
+Execute     get_config_export -library 
+Execute     get_config_export -output 
+Execute     get_config_export -qor_test 
+Execute     get_config_export -sim 
+Execute     get_config_export -taxonomy 
+Execute     get_config_export -use_ip 
+Execute     get_config_export -use_netlist 
+Execute     get_config_export -vendor 
+Execute     get_config_export -version 
+Execute     get_config_export -xo 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_export -vivado_clock 
+Execute     get_top 
+Execute     get_config_export -ipname 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): cnn
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -rtl verilog
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     get_solution -flow_target 
+Execute     get_config_export -xo 
+Execute     get_config_export -format 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=cnn xml_exists=1
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Command     ap_source done; 0.13 sec.
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/Axi_Transfer.compgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/generic_cast_IEEE754_int_6_float_s.compgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.compgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.constraint.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=4
+INFO-FLOW: DBG:CMD:       copying IP vlog from /home/lei/CNNIOT1/deeplib/deeplib/solution1/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from /home/lei/CNNIOT1/deeplib/deeplib/solution1/impl/vhdl
+Execute     get_config_export -format 
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=4 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=cnn
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=cnn
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.rtl_wrap.cfg.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.constraint.tcl 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/cnn.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/lei/CNNIOT1/deeplib/deeplib/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute           source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute     source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source /home/lei/Software/Xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec /home/lei/CNNIOT1/deeplib/deeplib/solution1/impl/ip/pack.sh
+Execute     get_config_export -output 
+Execute     send_msg_by_id INFO @200-802@%s deeplib/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file deeplib/solution1/impl/export.zip
+Command   export_design done; 34.88 sec.
+Command ap_source done; 36.44 sec.
+Execute cleanup_all 

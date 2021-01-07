@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="cnn" xd:componentRef="cnn" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="in_data" xd:originalName="in_data" xd:direction="in" xd:interfaceRef="in_data" xd:busTypeRef="axis" xd:arraySize="4294967296" xd:dataWidth="8"/>
+  <xd:arg xd:name="out_data" xd:originalName="out_data" xd:direction="out" xd:interfaceRef="out_data" xd:busTypeRef="axis" xd:arraySize="4294967296" xd:dataWidth="8"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="9190" xd:FF="8944" xd:BRAM="132" xd:DSP="72"/>
+</xd:acceleratorMap>

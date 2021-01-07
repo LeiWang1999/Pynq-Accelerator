@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="main.cpp" path="/home/lei/CNNIOT1/deeplib/deeplib/main.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="/home/lei/CNNIOT1/deeplib/test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
