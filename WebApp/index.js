@@ -54,7 +54,11 @@
   function _predict_btn_init() {
     /* SUBMIT BUTTON */
     var predictButton = $("#predictButton");
-
+    var predictFpgaButton = $('#predictFpga')
+    predictFpgaButton.on("click", function () {
+      var img = canvas.toDataURL("image/jpeg");
+      predict(img,type="fpga",net="lenet");
+    });
     predictButton.on("click", function () {
       var img = canvas.toDataURL("image/jpeg");
       predict(img);
@@ -75,20 +79,18 @@
 
   }
   function predict(img, type = "cpu", net = "lenet") {
-    if (net == "lenet") {
-      if (type == "cpu") {
         $.ajax({
           type: "POST",
-          url: "http://127.0.0.1:5000/predict/cpu/lenet",
+          url: "http://127.0.0.1:5000/predict",
           data: {
             img,
+            type,
+            net
           },
           success: function (data) {
             _update_table(data, type, net);
           },
         });
-      }
-    }
   }
   function _clear_btn_init() {
     /* CLEAR BUTTON */
