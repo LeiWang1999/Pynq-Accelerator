@@ -14,7 +14,7 @@ For more introduction of the Accelerator Design, you can dive deeply into this [
 
 #### Pynq side:
 
-You should ensure your pynq board can connect to the internet, if you have some issues, maybe [this blog](https://leiblog.wang/Embedding-board-internet-via-PC-Ethernet/) will help you. And, execute command below in your shell.
+You should ensure your pynq board can connect to the internet, if you have some issues of this topic, maybe [this blog](https://leiblog.wang/Embedding-board-internet-via-PC-Ethernet/) will help you. And, execute command below in your shell.
 
 ```bash
 sudo apt-get update && sudo apt-get install -y git
@@ -52,12 +52,14 @@ For my environment, I use Ethernet to connect my board and host computer:
 To run this application , you can execute this command:
 
 ```bash
-sudo python app.py
+sudo python3 app.py
 ```
 
 #### Host side:
 
 To run this application, open [index.html](https://github.com/LeiWang1999/Pynq-Accelerator/blob/master/WebApp/index.html) in your browser.
+
+And you should also custom this request [url](https://github.com/LeiWang1999/Pynq-Accelerator/blob/master/WebApp/index.js#L84) to your pynq board ip, for me the `127.0.0.1` just because I use Vscode RemoteSSH Plugin, and it can automatic forward board ip to localhost. But for you not with vscode, you should change the `127.0.0.1` to your boads ip, like `192.168.2.99`.
 
 ## Reference
 
