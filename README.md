@@ -1,6 +1,6 @@
 # Pynq-Accelerator
 
-~~final year project~~, The hardware side of this project was borrowed from [CNNIOT](https://github.com/mfarhadi/CNNIOT) which is a generic FPGA based Accelerator to run Convolution Neural Network and provides easy-understading and easy-customized hls code. To the software side, the `WebAPP` Floder provides a simpile website which has a canvas based drawing board , and I used ajax to send the picture we have drawed via Ethernet, the `app.py` is a flask webserver which can receive HTTP request and schedule Accelerator.
+~~This is a final year project~~, This is a simpile Accelerator Project based on PYNQ-Z1 board. The hardware side of this project was borrowed from [CNNIOT](https://github.com/mfarhadi/CNNIOT) which is a generic FPGA based Accelerator to run Convolution Neural Network and provides easy-understading and easy-customized hls code. To the software side, the `WebAPP` Floder provides a simpile website which has a canvas based drawing board , and I used ajax to send the picture we have drawed via Ethernet, the `app.py` is a flask webserver which can receive HTTP request and schedule Accelerator.
 
 A simpile video: [VideoCast](https://leiblog.wang/static/2021-01-11/predict_7.mp4)
 
