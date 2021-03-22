@@ -20,7 +20,7 @@ You should ensure your pynq board can connect to the internet, if you have some 
 sudo apt-get update && sudo apt-get install -y git
 git clone https://github.com/LeiWang1999/Pynq-Accelerator
 cd Pynq-Accelerator
-pip3 install -r ./requirement.txt
+pip install -r ./requirement.txt
 ```
 
 #### Host side:
@@ -52,7 +52,7 @@ For my environment, I use Ethernet to connect my board and host computer:
 To run this application , you can execute this command:
 
 ```bash
-python3 app.py
+sudo python app.py
 ```
 
 #### Host side:
